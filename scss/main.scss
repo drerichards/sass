@@ -1,0 +1,70 @@
+@import "partials/vars";
+@import "partials/mixins";
+
+@include links;
+
+body {
+  font-family: $main-font;
+  font-weight: 100;
+  color: $text-color;
+}
+
+@include ie_6 {
+  body {
+    font-size: 125%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $header-font;  
+}
+
+h2{
+  @include large-text;
+}
+p {
+}
+
+a {
+  color: $link-color;
+}
+
+.warning-button {
+  @include warning;
+  padding: 8px 12px;
+}
+
+#header {
+  @include box(8px, 1px solid #999);
+  @include box-shadow(2px 0px 4px #999, 1px 1px 6px $sec-color);
+  height: $header-height;
+  background-color: $theme-color;
+  #main-menu {
+    li{
+      display: inline;
+    }
+    a {
+      color: $menu-color;
+    }
+  }
+  #logo {}
+}
+
+#main {
+  width: $content-width;
+  @media only screen and (max-width: 960px) {
+    width: auto;
+    max-width: $content-width;
+  }
+  margin: 0 auto;
+  #content {}
+  #sidebar {}
+}
+
+#footer {
+  height: $footer-height;
+  background-color: $tern-color;
+}

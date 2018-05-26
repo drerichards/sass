@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Mina:regular,700);
+a {
+  font-style: italic;
+  text-decoration: none; }
+
+body {
+  font-family: "Alegreya Sans";
+  font-weight: 100;
+  color: #222; }
+
+* html body {
+  font-size: 125%; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Mina"; }
+
+h2 {
+  font-size: 22px;
+  font-weight: bold; }
+
+a {
+  color: #dd923b; }
+
+.warning-button {
+  background-color: orange;
+  color: #fff;
+  padding: 8px 12px; }
+
+#header {
+  border-radius: 8px;
+  border: 1px solid #999;
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #dd923b;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #dd923b;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #dd923b;
+  height: 60px;
+  background-color: #3288d8; }
+  #header #main-menu li {
+    display: inline; }
+  #header #main-menu a {
+    color: #fff; }
+
+#main {
+  width: 960px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 960px) {
+    #main {
+      width: auto;
+      max-width: 960px; } }
+
+#footer {
+  height: 90px;
+  background-color: #7ad63c; }
+
+/*# sourceMappingURL=main.css.map */
