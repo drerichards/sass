@@ -7,6 +7,9 @@ body {
   font-family: $main-font;
   font-weight: 100;
   color: $text-color;
+  @include large-screens {
+    font-size: 125%
+  }
 }
 
 @include ie_6 {
@@ -55,7 +58,7 @@ a {
 
 #main {
   width: $content-width;
-  @media only screen and (max-width: 960px) {
+  @include large-screens {
     width: auto;
     max-width: $content-width;
   }
