@@ -1,12 +1,12 @@
+@import "partials/functions";
 @import "partials/vars";
 @import "partials/mixins";
-
 @include links;
-
 body {
   font-family: $main-font;
   font-weight: 100;
   color: $text-color;
+  font-size: em(18px);
   @include large-screens {
     font-size: 125%
   }
@@ -22,17 +22,20 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $header-font;  
+  font-family: $header-font;
 }
 
-h2{
+h2 {
   @include large-text;
 }
-p {
-}
+
+p {}
 
 a {
   color: $link-color;
+  &:hover {
+    color: darken($link-color, 15%);
+  }
 }
 
 .warning-button {
@@ -46,11 +49,18 @@ a {
   height: $header-height;
   background-color: $theme-color;
   #main-menu {
-    li{
+    li {
       display: inline;
     }
     a {
       color: $menu-color;
+      padding: 6px 8px;
+      border-bottom: 1px solid transparentize($color: #fefefe, $amount: 1);
+      transition: border-bottom .5s;
+      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      &:hover {
+        border-bottom: 1px solid opacify($color: #fefefe, $amount: .5);
+      }
     }
   }
   #logo {}
@@ -63,11 +73,28 @@ a {
     max-width: $content-width;
   }
   margin: 0 auto;
-  #content {}
-  #sidebar {}
+  #content {
+    float: left;
+    width: 6 * $col;
+  }
+  #sidebar {
+    float: right;
+    width: 2 * $col;
+
+    li {
+      list-style-type: none;
+      padding: em(16px) em(20px);
+      border-bottom: 1px dashed #999;
+
+      &:hover {
+        background-color: #efefef;
+      }
+    }
+  }
 }
 
 #footer {
+  clear: both;
   height: $footer-height;
   background-color: $tern-color;
 }
