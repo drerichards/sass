@@ -32,6 +32,39 @@ body {
 .col-6 {
   width: 12em; }
 
+.bob-profile {
+  background-image: url("/img/bob-pic.png"); }
+
+.patty-profile {
+  background-image: url("/img/patty-pic.png"); }
+
+.sandy-profile {
+  background-image: url("/img/sandy-pic.png"); }
+
+.tiny {
+  font-size: 8px; }
+
+.small {
+  font-size: 11px; }
+
+.medium {
+  font-size: 14px; }
+
+.large {
+  font-size: 18px; }
+
+.picture-2 {
+  width: 20%; }
+
+.picture-4 {
+  width: 40%; }
+
+.picture-6 {
+  width: 60%; }
+
+.picture-8 {
+  width: 80%; }
+
 * html body {
   font-size: 125%; }
 

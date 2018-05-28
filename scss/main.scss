@@ -13,10 +13,39 @@ body {
   }
 }
 
+//////loops\\\\\\\
+//////for
 @for $i from 1 through 6 {
+  // through loops to 6, to stops at 5
   .col-#{$i} {
     width: $i * 2em;
   }
+}
+
+//////each
+$speakers: bob, patty, sandy;
+@each $speaker in $speakers {
+  .#{$speaker}-profile {
+    background-image: url('/img/#{$speaker}-pic.png');
+  }
+}
+
+$font-sizes: (tiny: 8px, small: 11px, medium: 14px, large: 18px);
+//name = key, size = value
+@each $name, $size in $font-sizes{
+  .#{$name} {
+    font-size: $size;
+  }
+}
+
+//////while
+$j: 2;
+@while $j <= 8 {
+  .picture-#{$j} {
+    width: $j * 10%;
+  }
+  //assign new value to meet conditional
+  $j: $j + 2;
 }
 
 @include ie_6 {
@@ -51,6 +80,7 @@ a {
 }
 
 .cta-button {
+  //inheritance
   @extend .warning-button;
   @include rounded;
   font-weight: bold;
