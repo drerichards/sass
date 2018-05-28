@@ -1,14 +1,39 @@
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Mina:regular,700);$text-color: #222;
+@import url(https://fonts.googleapis.com/css?family=Mina:regular,700);
+
+$theme: Dark;
+$theme: Light;
+
+$text-color: #222;
+$body-bkgd-color: #fff;
 $theme-color: rgb(50, 136, 216);
 $sec-color: rgb(221, 146, 59);
 $tern-color: rgb(122, 214, 60);
 $link-color: $sec-color;
 $menu-color: #fff;
 
+@if $theme==Dark {
+    $text-color: #fff;
+    $body-bkgd-color: #22222a;
+    $theme-color: #42424a;
+    $sec-color: #c24721;
+    $tern-color: #698932;
+    $link-color: $sec-color;
+    $menu-color: #fff;
+}
+
+@else if $theme==Light {
+    $text-color: #000;
+    $body-bkgd-color: #fff;
+    $theme-color: #372a27;
+    $sec-color: #d26741;
+    $tern-color: #b9da63;
+    $link-color: $sec-color;
+    $menu-color: #ffffff;
+}
+
 $main-font: 'Alegreya Sans';
 $header-font: 'Mina';
-
 $header-height: 60px;
 $footer-height: 90px;
 $content-width: 960px;

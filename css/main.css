@@ -7,11 +7,30 @@ a {
 body {
   font-family: "Alegreya Sans";
   font-weight: 100;
-  color: #222;
+  color: #000;
+  background-color: #fff;
   font-size: 1.125em; }
   @media only screen and (max-width: 960px) {
     body {
       font-size: 125%; } }
+
+.col-1 {
+  width: 2em; }
+
+.col-2 {
+  width: 4em; }
+
+.col-3 {
+  width: 6em; }
+
+.col-4 {
+  width: 8em; }
+
+.col-5 {
+  width: 10em; }
+
+.col-6 {
+  width: 12em; }
 
 * html body {
   font-size: 125%; }
@@ -27,29 +46,33 @@ h2 {
   font-weight: bold; }
 
 a {
-  color: #dd923b; }
+  color: #d26741; }
   a:hover {
-    color: #ad6b1e; }
+    color: #a04626; }
 
-.warning-button {
+.warning-button, .cta-button {
   background-color: orange;
   color: #fff;
   padding: 8px 12px; }
-  .warning-button:hover {
+  .warning-button:hover, .cta-button:hover {
     background-color: #ffc04d; }
+
+.cta-button {
+  border-radius: 6px;
+  font-weight: bold; }
 
 #header {
   border-radius: 8px;
   border: 1px solid #999;
-  box-shadow: 2px 0px 4px #999, 1px 1px 6px #dd923b;
-  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #dd923b;
-  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #dd923b;
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #d26741;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #d26741;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #d26741;
   height: 60px;
-  background-color: #3288d8; }
+  background-color: #372a27; }
   #header #main-menu li {
     display: inline; }
   #header #main-menu a {
-    color: #fff;
+    color: #ffffff;
     padding: 6px 8px;
     border-bottom: 1px solid rgba(254, 254, 254, 0);
     transition: border-bottom .5s;
@@ -80,6 +103,6 @@ a {
 #footer {
   clear: both;
   height: 90px;
-  background-color: #7ad63c; }
+  background-color: #b9da63; }
 
 /*# sourceMappingURL=main.css.map */

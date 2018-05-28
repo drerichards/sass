@@ -6,9 +6,16 @@ body {
   font-family: $main-font;
   font-weight: 100;
   color: $text-color;
+  background-color: $body-bkgd-color;
   font-size: em(18px);
   @include large-screens {
     font-size: 125%
+  }
+}
+
+@for $i from 1 through 6 {
+  .col-#{$i} {
+    width: $i * 2em;
   }
 }
 
@@ -41,6 +48,12 @@ a {
 .warning-button {
   @include warning;
   padding: 8px 12px;
+}
+
+.cta-button {
+  @extend .warning-button;
+  @include rounded;
+  font-weight: bold;
 }
 
 #header {
